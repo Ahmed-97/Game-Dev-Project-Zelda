@@ -6,7 +6,6 @@ class Entity(pygame.sprite.Sprite):
         self.frame_index = 0
         self.animation_speed = 0.15
         self.direction = pygame.math.Vector2()
-        self.hitbox = self.rect.inflate(0, -26)
 
     def move(self, speed):
         if self.direction.magnitude() != 0:
