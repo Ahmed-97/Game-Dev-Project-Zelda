@@ -39,7 +39,7 @@ class Player(pygame.sprite.Sprite):
         self.energy = self.stats['energy'] * 0.8
         self.exp = 123
         self.speed = self.stats['speed']
-        
+
     def import_player_assets(self):
         character_path = '../graphics/player/'
         self.animations = {'up': [], 'down': [], 'left': [], 'right': [],
