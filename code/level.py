@@ -7,6 +7,7 @@ from support import *
 from random import choice
 from weapon import Weapon
 from ui import UI
+from enemy import Enemy
 
 
 class Level:
@@ -63,6 +64,17 @@ class Level:
                                     self.destroy_attack,
                                     self.create_magic
                                 )
+                            else:
+                                if col == "390":
+                                    monster_name = "bamboo"
+                                elif col == "391":
+                                    monster_name = "spirit"
+                                elif col == "392":
+                                    monster_name = "raccoon"
+                                else:
+                                    monster_name = "squid"
+                                Enemy(monster_name, (x, y), [self.visible_sprites], self.obstacle_sprites)
+
 
     def create_attack(self):
         self.current_attack = Weapon(self.player, [self.visible_sprites])
